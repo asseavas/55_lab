@@ -1,5 +1,13 @@
 .burgerContainer {
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.burger {
+  width: 100%;
   height: 300px;
   overflow: auto;
   text-align: center;

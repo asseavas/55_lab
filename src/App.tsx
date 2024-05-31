@@ -1,4 +1,4 @@
-import { INGREDIENTS } from './Ingredient';
+import {INGREDIENTS} from './Ingredient';
 import React, {useState} from "react";
 import IngredientsContainer from './components/IngredientsContainer/IngredientsContainer';
 import Burger from './components/Burger/Burger';
@@ -31,6 +31,13 @@ const App: React.FC = () => {
     );
   };
 
+  const calculatePrice = () => {
+    return ingredients.reduce((acc, ingredient) => {
+      const ingredientInfo = INGREDIENTS.find(i => i.name === ingredient.name);
+      return acc + ingredient.count * (ingredientInfo?.price ?? 0);
+    }, 30);
+  };
+
   return (
     <div className="constructorContainer">
       <IngredientsContainer
@@ -38,7 +45,7 @@ const App: React.FC = () => {
         onAdd={addCount}
         onDelete={deleteCount}
       />
-      <Burger ingredients={ingredients} />
+      <Burger ingredients={ingredients} price={calculatePrice()} />
     </div>
   );
 };

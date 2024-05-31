@@ -3,9 +3,10 @@ import './Burger.css';
 
 interface BurgerProps {
   ingredients: { name: string; count: number }[];
+  price: number;
 }
 
-const Burger: React.FC<BurgerProps> = ({ ingredients }) => {
+const Burger: React.FC<BurgerProps> = ({ ingredients, price }) => {
   const renderIngredients = () => {
     const renderedIngredients = [];
 
@@ -22,12 +23,15 @@ const Burger: React.FC<BurgerProps> = ({ ingredients }) => {
 
   return (
     <div className="burgerContainer">
-      <div className="BreadTop">
-        <div className="Seeds1"></div>
-        <div className="Seeds2"></div>
+      <div className="burger">
+        <div className="BreadTop">
+          <div className="Seeds1"></div>
+          <div className="Seeds2"></div>
+        </div>
+        {renderIngredients()}
+        <div className="BreadBottom"></div>
       </div>
-      {renderIngredients()}
-      <div className="BreadBottom"></div>
+      <p>Price: {price}</p>
     </div>
   );
 };
