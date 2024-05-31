@@ -23,6 +23,7 @@ const Burger: React.FC<BurgerProps> = ({ ingredients, price }) => {
 
   return (
     <div className="burgerContainer">
+      <h3>Burger</h3>
       <div className="burger">
         <div className="BreadTop">
           <div className="Seeds1"></div>

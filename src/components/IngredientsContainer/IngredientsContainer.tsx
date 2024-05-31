@@ -16,6 +16,7 @@ interface IngredientsContainerProps {
 const IngredientsContainer: React.FC<IngredientsContainerProps> = ({ ingredients, onAdd, onDelete }) => {
   return (
     <div className="ingredientsContainer">
+      <h3>Ingredients</h3>
       {INGREDIENTS.map((ingredient, index) => {
         const ingredientCount = ingredients.find(i => i.name === ingredient.name);
         return (
