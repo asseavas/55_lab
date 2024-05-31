@@ -4,3 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+
+.ingredientButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,26 @@
+.ingredientButton {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 3px 4px 10px rgb(163,177,198,0.4), -9px -9px 16px rgba(255,255,255, 0.3);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.imageContainer {
+  width: 60px;
+  height: 60px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.ingredientName {
+  font-size: 18px;
+  margin-left: 10px;
+}
