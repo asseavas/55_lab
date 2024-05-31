@@ -5,9 +5,12 @@
   text-align: center;
 }
 
-.ingredientButtonsContainer {
+.constructorContainer {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  border-radius: 15px;
 }
+
+

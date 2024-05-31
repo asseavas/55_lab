@@ -3,11 +3,16 @@
   align-items: center;
   padding: 10px;
   width: 200px;
-  border: none;
+  border: 1px solid #ebebeb;
   border-radius: 6px;
-  box-shadow: 3px 4px 10px rgb(163,177,198,0.4), -9px -9px 16px rgba(255,255,255, 0.3);
   font-weight: 700;
-  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.ingredientButton:hover {
+  border-color: #d4d6db;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 4px;
+  color: #202124;
 }
 
 .imageContainer {

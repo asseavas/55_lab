@@ -2,9 +2,13 @@ import { Ingredient } from '../../Ingredient';
 import React from "react";
 import './IngredientsButton.css';
 
-const IngredientButton: React.FC<Ingredient> = ({image, name}) => {
+interface IngredientButtonProps extends Ingredient {
+  onAdd: () => void;
+}
+
+const IngredientButton: React.FC<IngredientButtonProps> = ({image, name, onAdd}) => {
   return (
-    <div className="ingredientButton">
+    <div className="ingredientButton" onClick={onAdd}>
       <div className="imageContainer">
         <img src={image} alt={`${name}Image`} />
       </div>

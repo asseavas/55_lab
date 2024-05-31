@@ -5,7 +5,7 @@ import baconImage from './assets/burgerIngredients/bacon.png';
 
 export interface Ingredient {
   name: string;
-  price: number;
+  price?: number;
   image: string;
 }
 
