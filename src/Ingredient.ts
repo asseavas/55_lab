@@ -12,6 +12,6 @@ export interface Ingredient {
 export const INGREDIENTS: Ingredient[] = [
   {name: 'Meat', price: 80, image: cutletImage},
   {name: 'Cheese', price: 50, image: cheeseImage},
-  {name: 'Lettuce leaves', price: 10, image: leavesImage},
+  {name: 'Salad', price: 10, image: leavesImage},
   {name: 'Bacon', price: 60, image: baconImage},
 ];

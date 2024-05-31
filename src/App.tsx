@@ -1,6 +1,7 @@
 import { INGREDIENTS } from './Ingredient';
 import React, {useState} from "react";
 import IngredientsContainer from './components/IngredientsContainer/IngredientsContainer';
+import Burger from './components/Burger/Burger';
 import './App.css';
 
 interface IngredientCount {
@@ -37,6 +38,7 @@ const App: React.FC = () => {
         onAdd={addCount}
         onDelete={deleteCount}
       />
+      <Burger ingredients={ingredients} />
     </div>
   );
 };
