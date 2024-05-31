@@ -1,6 +1,6 @@
 import { INGREDIENTS } from './Ingredient';
-import IngredientSection from './components/IngredientSection/IngredientSection';
 import React, {useState} from "react";
+import IngredientsContainer from './components/IngredientsContainer/IngredientsContainer';
 import './App.css';
 
 interface IngredientCount {
@@ -32,20 +32,11 @@ const App: React.FC = () => {
 
   return (
     <div className="constructorContainer">
-      <div className="ingredientsContainer">
-        {INGREDIENTS.map((ingredient, index) => {
-          const ingredientCount = ingredients.find(i => i.name === ingredient.name);
-          return (
-            <IngredientSection
-              key={index}
-              ingredient={ingredient}
-              count={ingredientCount ? ingredientCount.count : 0}
-              onAdd={() => addCount(ingredient.name)}
-              onDelete={() => deleteCount(ingredient.name)}
-            />
-          );
-        })}
-      </div>
+      <IngredientsContainer
+        ingredients={ingredients}
+        onAdd={addCount}
+        onDelete={deleteCount}
+      />
     </div>
   );
 };
